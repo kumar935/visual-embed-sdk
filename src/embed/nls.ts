@@ -1,10 +1,10 @@
 /**
  * Copyright (c) 2022
  *
- * Embed ThoughtSpot search or a saved answer
+ * Embed ThoughtSpot NLS
  *
  * @summary Search embed
- * @author Ayon Ghosh <ayon.ghosh@thoughtspot.com>
+ * @author Kumar Animesh <animesh.kumar@thoughtspot.com>
  */
 
 import { DOMSelector, Param, ViewConfig } from '../types';
