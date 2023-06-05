@@ -37,6 +37,7 @@ import {
     customCssInterface,
     ContextMenuTriggerOptions,
 } from './types';
+import { NLSEmbed } from './embed/nls';
 
 export {
     init,
@@ -48,6 +49,7 @@ export {
     SearchBarEmbed,
     PinboardEmbed,
     LiveboardEmbed,
+    NLSEmbed,
     AppEmbed,
     AuthFailureType,
     AuthStatus,
