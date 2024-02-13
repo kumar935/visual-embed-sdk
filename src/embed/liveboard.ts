@@ -143,6 +143,13 @@ export interface LiveboardViewConfig extends Omit<ViewConfig, 'hiddenHomepageMod
      * @version SDK: 1.26.0 | Thoughtspot: 9.7.0.cl, 9.8.0.sw
      */
     isLiveboardHeaderSticky?: boolean;
+    /**
+     * enable or disable ask sage
+     *
+     * @version SDK: 1.26.0 | Thoughtspot: 9.12.0.cl
+     * @default true
+     */
+    enableAskSage?: boolean;
 }
 
 /**
@@ -198,6 +205,7 @@ export class LiveboardEmbed extends V1Embed {
             showLiveboardDescription,
             showLiveboardTitle,
             isLiveboardHeaderSticky = true,
+            enableAskSage = true,
         } = this.viewConfig;
 
         const preventLiveboardFilterRemoval = this.viewConfig.preventLiveboardFilterRemoval
@@ -238,6 +246,7 @@ export class LiveboardEmbed extends V1Embed {
             params[Param.ShowLiveboardTitle] = showLiveboardTitle;
         }
 
+        params[Param.enableAskSage] = enableAskSage;
         params[Param.LiveboardHeaderSticky] = isLiveboardHeaderSticky;
 
         const queryParams = getQueryParamString(params, true);
